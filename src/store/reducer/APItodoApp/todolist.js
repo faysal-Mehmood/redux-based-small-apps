@@ -1,4 +1,5 @@
 import { client } from '../../../api/client';
+
 const todostate = {
   status: 'idle',
   todos: [],
@@ -75,7 +76,7 @@ function apitodos(state = todostate, action) {
       return state;
   }
 }
-// export const todos = useSelector(state);
+export const todolist = (state) => state.todos;
 // export const todoslist = (state) => {
 //   return state.todos;
 // };

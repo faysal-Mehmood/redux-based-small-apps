@@ -19,7 +19,7 @@ function CounterReducer(state = intialStates, action) {
       return state;
   }
 }
-const Count = (state) => state.Counter.value;
+export const Count = (state) => state.Counter.value;
 export const incrementIfOdd = () => (dispatch, getState) => {
   const currentValue = Count(getState());
   if (currentValue % 2 === 1) {

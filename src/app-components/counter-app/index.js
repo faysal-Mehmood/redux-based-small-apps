@@ -3,10 +3,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { increment, decrement } from '../../store/actions/counter';
-import { incrementIfOdd } from '../../store/reducer/counter/counter';
+import { incrementIfOdd, Count } from '../../store/reducer/counter/counter';
 
 const Index = () => {
-  const count = useSelector((state) => state.Counter.value);
+  const count = useSelector(Count);
   const dispatch = useDispatch();
   return (
     <div>

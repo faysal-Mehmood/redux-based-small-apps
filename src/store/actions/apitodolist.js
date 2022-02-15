@@ -1,5 +1,6 @@
 import { client } from '../../api/client';
 import Swal from 'sweetalert2';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 export const todosLoaded = (todos) => {
   return {
     type: 'apitodos/todosLoaded',
@@ -11,7 +12,6 @@ export const todosloading = () => {
     type: 'apitodos/todosLoading',
   };
 };
-// export const todosloading = () => ({ type: 'apitodos/todosLoading' });
 
 export async function fetchTodos(dispatch, getState) {
   dispatch(todosloading());
@@ -46,3 +46,10 @@ export function saveNewTodo(text) {
     console.log('res', response);
   };
 }
+
+//create async thunk
+// export const saveNewTodo = createAsyncThunk('todos/saveNewTodo', async text => {
+//   const initialTodo = { text }
+//   const response = await client.post('/fakeApi/todos', { todo: initialTodo })
+//   return response.todo
+// })

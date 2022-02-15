@@ -1,4 +1,5 @@
 import { React, useState } from 'react';
+import { createSelector } from '@reduxjs/toolkit';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   todoAdded,
@@ -6,10 +7,12 @@ import {
   todoCompleted,
   todoCompletedAll,
   todoClearAll,
-} from '../../store/actions/todolist';
-
+} from '../../store/reducer/todoApp/todolist';
+// import selectTodos from '../../store/reducer/todoApp/todolist';
 const Index = () => {
-  const todolist = useSelector((state) => state.todos.todos);
+  const todoitems = useSelector((state) => state.todos.entities);
+
+  const todolist = Object.values(todoitems);
   const dispatch = useDispatch();
   const [text, settext] = useState('');
   const handleChange = (e) => {
@@ -32,7 +35,7 @@ const Index = () => {
     });
     return count;
   };
-  console.log(todolist);
+  console.log('todolist', todolist);
   return (
     <div>
       <main>
