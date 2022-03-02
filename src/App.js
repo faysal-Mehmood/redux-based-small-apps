@@ -5,8 +5,11 @@ import Todolist from './app-components/todoList/index';
 import Applist from './app-components/app-list/index';
 import Apitodolist from './app-components/todoListApi/index';
 import BlogApp from './app-components/blogs-app/index';
+import { AddPostForm } from './app-components/blogs-app/addpost';
 import logo from './logo.svg';
 import './App.css';
+import { SinglePostPage } from './app-components/blogs-app/singlepost';
+import { EditPostForm } from './app-components/blogs-app/editpost';
 
 function App() {
   return (
@@ -29,6 +32,15 @@ function App() {
             </Route>
             <Route path="/blogapp">
               <BlogApp />
+            </Route>
+            <Route path="/add">
+              <AddPostForm />
+            </Route>
+            <Route path="/posts/:postId">
+              <SinglePostPage />
+            </Route>
+            <Route path="/edit/:postId">
+              <EditPostForm />
             </Route>
           </Switch>
         </Router>

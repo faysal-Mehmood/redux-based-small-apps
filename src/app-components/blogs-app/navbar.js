@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 const Navbar = () => {
   return (
     <nav>
@@ -6,7 +7,9 @@ const Navbar = () => {
         <h1>Redux Essentials Example</h1>
 
         <div className="navContent">
-          <div className="navLinks"></div>
+          <div className="navLinks">
+            <Link to="/add">Add blog</Link>
+          </div>
         </div>
       </section>
     </nav>
