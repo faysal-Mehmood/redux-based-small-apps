@@ -1,9 +1,11 @@
-import { configureStore } from '@reduxjs/toolkit';
-import todos from './reducer/todoApp/todolist';
-import Counter from './reducer/counter/counter';
-import apitodolist from './reducer/APItodoApp/todolist';
-import postSLice from './reducer/posts/post';
-import users from './reducer/posts/users';
+import { configureStore } from "@reduxjs/toolkit";
+import todos from "./reducer/todoApp/todolist";
+import Counter from "./reducer/counter/counter";
+import apitodolist from "./reducer/APItodoApp/todolist";
+import postSLice from "./reducer/posts/post";
+import users from "./reducer/posts/users";
+import apiUser from "./reducer/ApiPost/user";
+import Apipost from "./reducer/ApiPost/post";
 // import { createStore, applyMiddleware } from 'redux';
 // import thunkMiddleware from 'redux-thunk';
 // import { composeWithDevTools } from 'redux-devtools-extension';
@@ -19,6 +21,8 @@ const store = configureStore({
     apitodolist: apitodolist,
     posts: postSLice,
     users: users,
+    Apipost: Apipost,
+    apiUser: apiUser,
   },
 });
 export default store;

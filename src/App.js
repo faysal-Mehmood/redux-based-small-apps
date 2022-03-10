@@ -5,6 +5,7 @@ import Todolist from './app-components/todoList/index';
 import Applist from './app-components/app-list/index';
 import Apitodolist from './app-components/todoListApi/index';
 import BlogApp from './app-components/blogs-app/index';
+import BlogApi from './app-components/api-blogs-app/index'
 import { AddPostForm } from './app-components/blogs-app/addpost';
 import logo from './logo.svg';
 import './App.css';
@@ -41,6 +42,9 @@ function App() {
             </Route>
             <Route path="/edit/:postId">
               <EditPostForm />
+            </Route>
+            <Route path="/blogapi">
+              < BlogApi/>
             </Route>
           </Switch>
         </Router>

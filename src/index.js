@@ -7,6 +7,14 @@ import { Provider } from 'react-redux';
 import './api/server';
 import store from './store';
 import { fetchTodos } from './store/actions/apitodolist';
+import {fetchUsers} from './store/reducer/ApiPost/user';
+
+import { worker } from './blogapi/server'
+
+// Start our mock API server
+worker.start({ onUnhandledRequest: 'bypass' })
+
+store.dispatch(fetchUsers())
 store.dispatch(fetchTodos);
 ReactDOM.render(
   <React.StrictMode>
