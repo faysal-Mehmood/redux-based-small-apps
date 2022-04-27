@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 const Index = () => {
   return (
     <>
@@ -8,6 +8,7 @@ const Index = () => {
       <Link to="/apitodolist">To do list with api</Link>
       <Link to="/blogapp">Blog app</Link>
       <Link to="/blogapi">Blog API</Link>
+      <Link to="/layout">Layout</Link>
     </>
   );
 };
