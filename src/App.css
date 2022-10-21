@@ -1,6 +1,6 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 .App-logo {
   height: 40vmin;
@@ -223,7 +223,7 @@ button.reaction-button {
   position: absolute;
   top: 0;
   left: 0;
-  content: '';
+  content: "";
 }
 
 .loader:after {
@@ -231,7 +231,7 @@ button.reaction-button {
   width: 75%;
   height: 75%;
   border-radius: 50%;
-  content: '';
+  content: "";
   margin: auto;
   position: absolute;
   top: 0;

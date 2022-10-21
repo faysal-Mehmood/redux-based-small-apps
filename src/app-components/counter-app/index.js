@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
-import { increment, decrement } from '../../store/actions/counter';
-import { incrementIfOdd, Count } from '../../store/reducer/counter/counter';
+import { increment, decrement } from "../../store/actions/counter";
+import { incrementIfOdd, Count } from "../../store/reducer/counter/counter";
 
 const Index = () => {
-  const [name, setname] = useState('raja');
+  const [name, setname] = useState("raja");
   const count = useSelector(Count);
   const dispatch = useDispatch();
   useEffect(() => {
-    setname('faisal');
+    setname("faisal");
 
     setTimeout(() => {
-      setname('mehmood');
+      setname("mehmood");
     }, 3000);
   }, []);
 

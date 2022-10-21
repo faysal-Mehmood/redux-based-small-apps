@@ -3,14 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mswjs/data": "^0.8.4",
     "@reduxjs/toolkit": "^1.7.1",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
-    "@mswjs/data": "^0.8.4",
+    "axios": "^0.27.2",
     "date-fns": "^2.28.0",
     "faker": "^4.1.0",
     "miragejs": "^0.1.35",
+    "mock-socket": "^9.0.3",
+    "msw": "^0.36.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
@@ -22,10 +25,8 @@
     "redux-thunk": "^2.4.1",
     "seedrandom": "^3.0.5",
     "sweetalert2": "^11.4.0",
-    "web-vitals": "^2.1.2",
-    "msw": "^0.36.3",
     "txtgen": "^2.2.4",
-    "mock-socket": "^9.0.3"
+    "web-vitals": "^2.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
